@@ -1,0 +1,63 @@
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container {
+  max-width: 80%;
+  color: white;
+}
+
+#googe_button:focus { outline: none; }
+
+.container .col {
+}
+
+.profile-image {
+  float: right;
+  width: 75px;
+}
+
+.profile {
+  width: 500px;
+  height: 250px;
+  padding: 15px;
+}
+
+button {
+  margin: 5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 15px;
+}
+
+.credentials-card {
+  // position: relative;
+  width: 500px;
+  height: 300px;
+  padding: 15px;
+}
+
+:host ::ng-deep .card {
+  height: 100%;
+}
+
+:host ::ng-deep .card-header {
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+:host ::ng-deep .card-hide-show {
+  visibility: hidden;
+}
+
+.no-creds {
+  padding: 15px;
+  color: #ddd;
+}

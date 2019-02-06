@@ -1,0 +1,252 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+/*****************************************************************
+Theme dark
+*****************************************************************/
+.tnw-dark {
+  @import "scss/_tnwTheme-dark";
+  @import "common";
+}
+
+// // /*****************************************************************
+// // Theme light
+// // *****************************************************************/
+// .tnw-light {
+//   @import "scss/_tnwTheme-light";
+// }
+
+// /*****************************************************************
+// Theme solarized light
+// *****************************************************************/
+// .solarized-light {
+//   @import "scss/_tnwTheme-solarized-light";
+// }
+
+// /*****************************************************************
+// Theme midnight
+// *****************************************************************/
+// .midnight {
+//   @import "scss/_tnwTheme-midnight";
+// }
+
+// /*****************************************************************
+// Theme pastel
+// *****************************************************************/
+// .pastel {
+//   @import "scss/_tnwTheme-pastel";
+// }
+
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-red-light {
+//   $primary: $red;
+//   $enable-dark: false;
+//   @import "scss/_tnwTheme-bs";
+// }
+
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-indigo-light {
+//   $primary: $indigo;
+//   $enable-dark: false;
+//   @import "scss/_tnwTheme-bs";
+// }
+
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-gray-light {
+//   $primary: $gray-900;
+//   $enable-dark: false;
+//   @import "scss/_tnwTheme-bs";
+// }
+
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-teal-light {
+//   $primary: $teal;
+//   $enable-dark: false;
+//   @import "scss/_tnwTheme-bs";
+// }
+
+/*****************************************************************
+Theme bootstrap
+*****************************************************************/
+// .bootstrap-yellow-dark {
+//   $primary: $yellow;
+//   $enable-dark: true;
+//   @import "scss/_tnwTheme-bs";
+// }
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-red-dark {
+//   $primary: $red;
+//   $enable-dark: true;
+//   @import "scss/_tnwTheme-bs";
+// }
+// /*****************************************************************
+// Theme bootstrap
+// *****************************************************************/
+// .bootstrap-purple-dark {
+//   $primary: $purple;
+//   $enable-dark: true;
+//   @import "scss/_tnwTheme-bs";
+// }
+/*****************************************************************
+Theme bootstrap
+*****************************************************************/
+// .bootstrap-green-dark {
+//   $primary: $green;
+//   $enable-dark: true;
+//   @import "scss/_tnwTheme-bs";
+// }
+
+// /*****************************************************************
+// Theme material
+// *****************************************************************/
+// .material-red {
+//   $primary: $red;
+//   @import "scss/_tnwTheme-material";
+// }
+
+// /*****************************************************************
+// Theme material
+// *****************************************************************/
+// .material-yellow {
+//   $primary: $yellow;
+//   @import "scss/_tnwTheme-material";
+// }
+
+// /*****************************************************************
+// Theme material
+// *****************************************************************/
+// .material-teal {
+//   $primary: $teal;
+//   @import "scss/_tnwTheme-material";
+// }
+
+/*****************************************************************
+Theme material
+*****************************************************************/
+// .material-pink {
+//   $primary: $pink;
+//   @import "scss/_tnwTheme-material";
+// }
+/*****************************************************************
+Theme material
+*****************************************************************/
+// .material-blue {
+//   $primary: $blue;
+//   @import "scss/_tnwTheme-material";
+// }
+/*****************************************************************
+Theme material
+*****************************************************************/
+// .material-cyan {
+//   $primary: $cyan;
+//   @import "scss/_tnwTheme-material";
+// }
+// /*****************************************************************
+// Theme material
+// *****************************************************************/
+// .material-indigo {
+//   $primary: $indigo;
+//   @import "scss/_tnwTheme-material";
+// }
+// /*****************************************************************
+// Theme material
+// *****************************************************************/
+// .material-green {
+//   $primary: $green;
+//   @import "scss/_tnwTheme-material";
+// }
+
+// /*****************************************************************
+// Theme materialpurple
+// *****************************************************************/
+// .material-purple {
+//   $primary: $purple;
+//   @import "scss/_tnwTheme-material";
+// }
+
+* { box-sizing: border-box; }
+
+// TNW defined classes
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  cursor: default;
+}
+
+#app-tooltip {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.network-0 {
+  fill: var(--network-clr-0);
+  background-color:var(--network-clr-0);
+}
+.network-1 {
+  fill: var(--network-clr-1);
+  background-color: var(--network-clr-1);
+}
+.network-2 {
+  fill: var(--network-clr-2);
+  background-color: var(--network-clr-2);
+}
+.network-3 {
+  fill: var(--network-clr-3);
+  background-color: var(--network-clr-3);
+}
+.network-4 {
+  fill: var(--network-clr-4);
+  background-color: var(--network-clr-4);
+}
+.network-5 {
+  fill: var(--network-clr-5);
+  background-color: var(--network-clr-5);
+}
+.network-6 {
+  fill: var(--network-clr-6);
+  background-color: var(--network-clr-6);
+}
+.network-7 {
+  fill: var(--network-clr-7);
+  background-color: var(--network-clr-7);
+}
+.network-8 {
+  fill: var(--network-clr-8);
+  background-color: var(--network-clr-8);
+}
+

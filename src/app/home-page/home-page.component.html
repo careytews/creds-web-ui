@@ -1,0 +1,117 @@
+<div class="jumbotron">
+  <h1>Credentials service</h1>
+  <p class="lead">Collect your Trust Networks credentials from this page.</p>
+</div>
+
+<div class="container">
+
+  <div *ngIf="signedInState !== signedInStateUnknownType">
+
+    <div *ngIf="signedInState === signedInStateSignedInType; else notSignedIn">
+
+      <div class="row">
+
+        <tnw-dashboard-card class="profile"
+                            [title]="'Profile'"
+                            [initialShow]=true
+                            [hideLocationTop]=true>
+          <div *ngIf="basicProfile !== null">
+            <img *ngIf="basicProfile.imageURL != null"
+                 class="profile-image"
+                 src="{{basicProfile.imageURL}}" />
+            <p>You are signed in as:</p>
+            <p>{{basicProfile.email}}</p>
+          </div>
+          <div class="footer">
+            <button class="btn btn-primary"
+                    (click)="signOut()">Sign Out</button>
+          </div>
+        </tnw-dashboard-card>
+      </div>
+
+      <div *ngIf="credsListError.length == 0; else showCredsListError">
+        <div *ngIf="credsListRetrieved; else credsNotRetrievedYet">
+
+          <h3>Web Credentials</h3>
+
+          <div class="row">
+            <p class="no-creds"
+               *ngIf="webCredentials.length === 0">You do not have any web credentials</p>
+            <tnw-dashboard-card *ngFor="let item of webCredentials"
+                                class="credentials-card"
+                                [title]="item.name"
+                                [initialShow]=true
+                                [hideLocationTop]=true>
+              <p>Created: {{item.start}}</p>
+              <p>Expires: {{item.end}}</p>
+              <p>Description: {{item.description}}</p>
+              <div class="footer">
+                <button class="btn btn-secondary"
+                        (click)="downloadWebCreds(item.index)">Key Bundle Download</button>
+                <button *ngIf="selected != null && item == selected && selected.pass.length > 0 && !selected.revealed"
+                        class="btn btn-secondary"
+                        (click)="revealPassword(true)">Reveal password</button>
+                <button *ngIf="selected != null && item == selected && selected.pass.length > 0 && selected.revealed"
+                        class="btn btn-danger"
+                        (click)="revealPassword(false)">{{item.pass}}</button>
+              </div>
+            </tnw-dashboard-card>
+          </div>
+
+          <h3>VPN Credentials</h3>
+
+          <div class="row">
+            <p class="no-creds"
+               *ngIf="vpnCredentials.length === 0">You do not have any VPN credentials</p>
+            <tnw-dashboard-card *ngFor="let item of vpnCredentials"
+                                class="credentials-card"
+                                [title]="item.name"
+                                [initialShow]=true
+                                [hideLocationTop]=true>
+              <p>Created: {{item.start}}</p>
+              <p>Expires: {{item.end}}</p>
+              <p>Description: {{item.description}}</p>
+              <div class="footer">
+                <button class="btn btn-secondary"
+                        (click)="downloadVPNCreds(item.name, 'us')">US OpenVPN Config</button>
+                <button class="btn btn-secondary"
+                        (click)="downloadVPNCreds(item.name, 'uk')">UK OpenVPN Config</button>
+              </div>
+            </tnw-dashboard-card>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <ng-template #notSignedIn>
+    <div class="row">
+      <tnw-dashboard-card class="profile"
+                          [title]="'Sign in'"
+                          [initialShow]=true
+                          [hideLocationTop]=true>
+        <p>In order to use this service, you need to be authenticated with Google.</p>
+        <div class="footer">
+          <input type="image"
+                 id="googe_button"
+                 [src]="focus ? 'assets/images/btn_google_signin_dark_focus_web.png' : 'assets/images/btn_google_signin_dark_normal_web.png'"
+
+                 (click)="signIn()"
+                 (focus)="onFocus(true)"
+                 (blur)="onFocus(false)">
+        </div>
+      </tnw-dashboard-card>
+    </div>
+  </ng-template>
+
+  <ng-template #credsNotRetrievedYet>
+    <p>Retreiving credentials information...</p>
+    <img src="assets/images/loading.gif" />
+  </ng-template>
+
+  <ng-template #showCredsListError>
+    <p>{{ credsListError }}</p>
+  </ng-template>

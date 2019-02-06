@@ -1,0 +1,89 @@
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// @import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+// @import "~bootstrap/scss/pagination";
+// @import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+// @import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+// @import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+
+// Bootstrap CSS overrides
+.btn-sm, .btn-group-sm > .btn {
+  line-height: 1;
+}
+
+.card-header {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.card-body {
+  padding: 0.65rem;
+}
+
+.breadcrumb {
+  padding: 0.25rem;
+  margin-bottom: 0rem;
+}
+
+header .datatable-header-cell {
+  padding: .5rem;
+}
+
+.rotate.pr-1 {
+  padding-right:0px !important;
+}
+
+.tooltip-inner {
+  max-width: 400px;
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: left;
+  background-color: #000;
+  border-radius: 0.25rem;
+}
+
+$lime:     #E4FF1A !default;
+$mauve:    #7D83FF !default;
+$deepteal: #136F63 !default;
+
+$nw-colors: () !default;
+$nw-colors: map-merge((
+  "blue":       $blue,
+  "pink":       $pink,
+  "orange":     $orange,
+  "indigo":     $indigo,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "deepteal":   $deepteal,
+  "mauve":      $mauve,
+  "lime":       $lime,
+), $nw-colors);
